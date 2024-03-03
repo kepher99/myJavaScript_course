@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>textbox-DOM</title>
+   
+  </head>
+  <body>
+  <input placeholder="name" class="js-name" onkeydown="
+    if (event.key === 'Enter'){
+      NameReveal();
+    }
+    ">
+  <button onclick="
+  
+  ">submit</button>
+  <p class="js-reveal"></p>
+
+    <script>
+      function NameReveal(){
+        const inputElement = document.querySelector('.js-name');
+  document.querySelector('.js-reveal')
+    .innerHTML = `Your name is: ${inputElement.value}`; 
+      }
+    </script>
+  </body>
+</html>

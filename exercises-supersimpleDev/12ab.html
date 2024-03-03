@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions Exercise</title>
+  </head>
+  <body>
+    <script>
+      let add = function(){
+        console.log(2+3);
+      };
+
+      add();
+      add();
+
+      function runTwice(fun){
+        fun();
+        fun();
+      }
+
+      runTwice(function(){
+        console.log('12b');
+      });
+
+      runTwice(add);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops part 2</title>
+  </head>
+  <body>
+    <script>
+      /*
+      const myArray = ['hello','world','search','good'];
+      let found = false;
+
+      for(let i = 0; i < myArray.length; i++) {
+        // code inside the loop will be executed for each element
+
+        if(myArray[i] === 'search'){
+          console.log(i);
+          found = true;
+        }
+      }
+
+      if(!found){
+        console.log(-1);
+      }
+      */
+
+      let words = ['hello', 'world', 'search', 'good'];
+
+  // Set the index to -1 at the start (so we'll assume
+  // the string 'search' doesn't exist in the array).
+  // If we find the string 'search' in the array, we
+  // will update the index.
+
+  let index = -1;
+
+  for(let i = 0; i < words.length; i++) {
+    if(words[i] === 'search') {
+      index = i;
+  }
+}
+  console.log(index);
+
+  words = ['not','found'];
+  index = -1;
+
+  for(let i = 0; i < words.length; i++) {
+    if(words[i] === 'search') {
+      index = i;
+    }
+  }
+
+  console.log(index);
+
+    </script>
+  </body>
+</html>

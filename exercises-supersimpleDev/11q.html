@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops part 2</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(array,word){
+        for(let i=0;i<array.length;i++){
+          if(array[i] === word){
+            // Instead of creating an accumulator
+            // variable and updating it in the loop,
+            // we can just return i directly, when
+            // we find it since this is a function.
+            return i;
+          }
+        }
+
+         // If the function has not returned by now,
+        // logically that means the word must not
+        // exist in the array, so we'll return -1.
+        return -1;
+
+      }
+    // Example 1
+    const array1 = ['green', 'red', 'blue', 'red'];
+    const result1 = findIndex(array1, 'red');
+    console.log(result1); // Output: 1
+
+    // Example 2
+    const array2 = ['green', 'red', 'blue', 'red'];
+    const result2 = findIndex(array2, 'yellow');
+    console.log(result2); // Output: -1
+    </script>
+  </body>
+</html>

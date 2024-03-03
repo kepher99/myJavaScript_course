@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops part 2</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(array,word){
+        for(let i=0;i<array.length;i++){
+          if(array[i] === word){
+            // Instead of creating an accumulator
+            // variable and updating it in the loop,
+            // we can just return i directly, when
+            // we find it since this is a function.
+            return i;
+          }
+        }
+
+         // If the function has not returned by now,
+        // logically that means the word must not
+        // exist in the array, so we'll return -1.
+        return -1;
+
+      }
+
+      function unique(array){
+        const result = [];
+
+        for(let i = 0; i < array.length; i++) {
+          const word = array[i];
+           // Using the findIndex() function from above, we
+          // can check if the string is already in the
+          // result array. If it's not in the result array
+          // (index is -1), then add it to the result array.
+
+          if(findIndex(result, word) === -1) {
+            result.push(word);
+      }
+    }
+
+    return result;
+  }
+
+
+    // Example 1
+    console.log(unique(['green','red','blue','red']));
+
+    // Example 2
+    console.log(unique(['red','green','green','red']));
+    
+    </script>
+  </body>
+</html>

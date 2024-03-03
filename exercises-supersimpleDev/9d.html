@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9d-textbox-DOM</title>
+   
+  </head>
+  <body>
+    <input placeholder="Name" class="js-name-input" 
+    onkeydown="
+     if(event.key === 'Enter'){
+    showName();
+     } 
+      ">
+      
+    <button onclick="
+   showName();
+    ">submit</button>
+
+    <p class="js-message"></p>
+    <script>
+        function showName(){
+          const inputElement = document.querySelector('.js-name-input');
+    document.querySelector('.js-message')
+      .innerHTML = `Your name is: ${inputElement.value}`;
+      }
+    </script>
+  </body>
+</html>

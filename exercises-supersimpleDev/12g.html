@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button onclick="
+      messages++;
+      ">Add</button>
+    <button onclick="
+    messages--;
+    ">Remove</button>
+    <script>
+  let messages = 3; // Initializing a variable named "messages" with a value of 3
+  let showNewMessages = false;// Adding a flag variable to control showing new messages
+
+  setInterval(function () { // Using setInterval to execute a function repeatedly at intervals of 1000 milliseconds (1 second)
+    if (messages > 0) {
+      if (showNewMessages){
+        document.title = `(${messages})New messages`; // If the title is 'App', it sets the title to '(3) New messages', using the value of the variable "messages"
+    } else {
+        document.title = 'App'; // If the title is anything other than 'App', it sets the title back to 'App'
+    }
+    showNewMessages = !showNewMessages; 
+  }else {
+    document.title = 'App';
+  }
+  }, 1000);
+  </script>
+  
+  </body>
+</html>

@@ -1,0 +1,31 @@
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Arrays and Loops + functions</title>
+            </head>
+              <body>
+                <script>
+    function removeEgg(foods){
+      // To remove the last 2 'egg', reverse the array first.
+      const reverseFoods = foods.reverse();
+
+    const result = [];
+    let eggsRemoved = 0;
+
+    for(let i=0; i<foods.length; i++){
+    if(reverseFoods[i] === 'egg' && eggsRemoved < 2){
+    eggsRemoved++;
+    continue;
+    }
+
+    result.push(reverseFoods[i]);
+    }
+    // At the end, remember to .reverse() back the result.
+    return result.reverse();
+    }
+
+
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+        </script>
+      </body>
+    </html>
